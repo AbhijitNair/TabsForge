@@ -6,6 +6,10 @@ A lightweight, portable Windows utility for launching multiple Windows Terminal 
 
 TabsForge lets you configure a list of directories and generate a `.bat` file that opens Windows Terminal with each directory as a separate tab. Useful for developers who work across multiple project folders daily.
 
+## Download
+
+You can download the portable executable from the [Releases](https://github.com/AbhijitNair/TabsForge/releases) page. No installation or build required — just download, extract, and run.
+
 ## Features
 
 - Add directory paths via an inline text input
@@ -16,28 +20,6 @@ TabsForge lets you configure a list of directories and generate a `.bat` file th
 - Persistent storage — your path list is saved between sessions
 - Fully portable — no installation, no registry writes, no AppData usage
 - Tiny footprint (~5 MB) thanks to Neutralinojs
-
-## Getting Started
-
-### Prerequisites
-
-- [Windows Terminal](https://aka.ms/terminal) installed on the target machine
-- [neu CLI](https://neutralino.js.org/docs/cli/neu-cli) for development (`npm install -g @neutralinojs/neu`)
-
-### Development
-
-```bash
-# Run the app in development mode
-neu run
-```
-
-### Build Portable Executable
-
-```bash
-neu build
-```
-
-This creates `dist/TabsForge/` containing the portable application. Share the folder — no installation required.
 
 ## Usage
 
@@ -60,6 +42,30 @@ wt --window new new-tab --startingDirectory "C:\project-a" ^; new-tab --starting
 ## Data Storage
 
 Path configuration is saved in `paths.json` alongside the executable. No data is written to AppData, the registry, or any system directory.
+
+## Development
+
+For contributors who want to build from source:
+
+### Prerequisites
+
+- [Windows Terminal](https://aka.ms/terminal) installed on the target machine
+- [neu CLI](https://neutralino.js.org/docs/cli/neu-cli) for development (`npm install -g @neutralinojs/neu`)
+
+### Run in development mode
+
+```bash
+# Run the app in development mode
+neu run
+```
+
+### Build Portable Executable
+
+```bash
+neu build
+```
+
+This creates `dist/TabsForge/` containing the portable application. Share the folder — no installation required.
 
 ## License
 
