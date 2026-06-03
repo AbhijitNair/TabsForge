@@ -1,0 +1,282 @@
+/* styles.css - Windows-style UI styling */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+/* Main container - fills entire viewport, flex column */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+.app-description {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+/* Path list wrapper - takes all remaining space */
+.path-list-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #a0a0a0;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  min-height: 0;
+}
+
+/* Path list - scrollable area that fills the wrapper */
+.path-list-container {
+  background-color: #ffffff;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Add input row - always visible at bottom of wrapper */
+.add-input-row {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 8px;
+  background-color: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+#path-input {
+  flex: 1;
+  height: 24px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-family: inherit;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+#path-input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 1px #0078d4;
+}
+
+/* Actions section - always at bottom */
+.actions-section {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+/* Individual path entry rows */
+.path-entry {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 8px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  transition: background-color 0.1s ease;
+}
+
+.path-entry:last-child {
+  border-bottom: none;
+}
+
+.path-entry:hover {
+  background-color: #f5f5f5;
+}
+
+/* Drag handle */
+.drag-handle {
+  cursor: grab;
+  user-select: none;
+  font-size: 16px;
+  color: #888888;
+  padding: 4px 6px;
+  margin-right: 6px;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.drag-handle:hover {
+  color: #555555;
+  background-color: #e8e8e8;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Path text display */
+.path-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  padding: 4px 8px;
+  font-size: 13px;
+  color: #1a1a1a;
+  min-width: 0;
+}
+
+/* Plus and minus buttons */
+.plus-btn,
+.minus-btn {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #b0b0b0;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.plus-btn:hover,
+.minus-btn:hover {
+  background-color: #e0e0e0;
+  border-color: #808080;
+}
+
+.plus-btn:active,
+.minus-btn:active {
+  background-color: #d0d0d0;
+}
+
+/* Inline insertion input row */
+.inline-input-row {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 8px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fffff0;
+}
+
+.inline-input {
+  flex: 1;
+  height: 24px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-family: inherit;
+  border: 1px solid #0078d4;
+  border-radius: 2px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.inline-input:focus {
+  border-color: #005a9e;
+  box-shadow: 0 0 0 1px #005a9e;
+}
+
+/* Drag-over visual feedback */
+.drag-over {
+  border-top: 2px solid #0078d4;
+  background-color: #e8f4fd;
+}
+
+/* Row being dragged */
+.dragging {
+  opacity: 0.4;
+  background-color: #f0f0f0;
+}
+
+/* Button styles */
+#clear-all-btn,
+#create-bat-btn {
+  height: 30px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-family: inherit;
+  border: 1px solid #a0a0a0;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+#clear-all-btn:hover,
+#create-bat-btn:hover {
+  background-color: #e0e0e0;
+  border-color: #808080;
+}
+
+#clear-all-btn:active,
+#create-bat-btn:active {
+  background-color: #d0d0d0;
+}
+
+#create-bat-btn {
+  background-color: #0078d4;
+  border-color: #0078d4;
+  color: #ffffff;
+}
+
+#create-bat-btn:hover {
+  background-color: #106ebe;
+  border-color: #106ebe;
+}
+
+#create-bat-btn:active {
+  background-color: #005a9e;
+  border-color: #005a9e;
+}
+
+/* Scrollbar styling */
+.path-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.path-list-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.path-list-container::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 4px;
+}
+
+.path-list-container::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}

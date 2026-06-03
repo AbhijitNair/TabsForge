@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabsForge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TabsForge</h1>
+    <p class="app-description">Add directory paths below, then generate a .bat file to launch Windows Terminal with each path as a separate tab in the terminal window.</p>
+
+    <div class="path-list-wrapper">
+      <div class="path-list-container">
+        <div id="path-list"></div>
+      </div>
+      <div class="add-input-row">
+        <input type="text" id="path-input" placeholder="Type a path and press Enter..." aria-label="Directory path input">
+      </div>
+    </div>
+
+    <div class="actions-section">
+      <button id="clear-all-btn">Clear All</button>
+      <button id="create-bat-btn">Create .bat</button>
+    </div>
+  </div>
+
+  <script src="js/neutralino.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
