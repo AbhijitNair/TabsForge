@@ -1,10 +1,10 @@
 # TabsForge
 
-A lightweight, portable Windows utility for launching multiple Windows Terminal tabs from a predefined list of directory paths. Useful for developers who work across multiple project folders daily.
+A lightweight, portable Windows utility for launching multiple Windows Terminal tabs from a predefined list of directory paths.
 
 ## What it does
 
-TabsForge lets you configure a list of directories and generate a `.bat` file that opens Windows Terminal with each directory as a separate tab. 
+TabsForge lets you configure a list of directories and generate a `.bat` file that opens Windows Terminal with each directory as a separate tab. Useful for developers who work across multiple project folders daily. 
 
 <img width="544" height="320" alt="Image" src="https://github.com/user-attachments/assets/55decf87-2ef3-4ee3-866c-ca2e9be78c49" />
 
