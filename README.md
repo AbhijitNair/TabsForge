@@ -6,7 +6,7 @@ A lightweight, portable Windows utility for launching multiple Windows Terminal 
 
 TabsForge lets you configure a list of directories and generate a `.bat` file that opens Windows Terminal with each directory as a separate tab. Useful for developers who work across multiple project folders daily.
 
-<img width="680" height="400" alt="Image" src="https://github.com/user-attachments/assets/55decf87-2ef3-4ee3-866c-ca2e9be78c49" />
+<img width="544" height="320" alt="Image" src="https://github.com/user-attachments/assets/55decf87-2ef3-4ee3-866c-ca2e9be78c49" />
 
 ## Download
 
